@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    gap: 50px;
+    height: 100%;
+
+    .item {
+        text-decoration: none;
+        color: black;
+    }
+
+    .item:hover {
+        border-bottom: 1px solid black;
+    }
+}
