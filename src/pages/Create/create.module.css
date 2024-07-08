@@ -20,6 +20,8 @@
 
 .inputs {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     width: 100%;
     gap: 20px;
 }
@@ -33,7 +35,7 @@ textarea {
     outline-offset: 3px;
     padding: 10px 1rem;
     transition: 0.25s;
-    width: 50%;
+    width: 45%;
 }
 
 textarea {

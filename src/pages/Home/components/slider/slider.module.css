@@ -1,0 +1,68 @@
+.container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icons {
+    position: absolute;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon {
+    font-size: 80px;
+    cursor: pointer;
+}
+
+.context {
+    width: 80%;
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.slide {
+    min-width: 32%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+    
+    overflow: hidden;
+    img {
+        width: 80%;
+        height: 40%;
+    }
+}
+
+.footSection {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+
+    div {
+        width: 33%;
+        text-align: center;
+        border-right: 1px solid black;
+    }
+
+    div:last-child {
+        border: none;
+    }
+}
+
+.hide {
+    display: none;
+}

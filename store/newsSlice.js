@@ -3,7 +3,9 @@ import { createSlice } from '@reduxjs/toolkit'
 export const newsSlice = createSlice({
     name: 'News',
     initialState: {
+        boole: true,
         allNews: [],
+        selectedCategory: "All",
     },
     reducers: {
         setNews: (state, action) => {
@@ -19,12 +21,18 @@ export const newsSlice = createSlice({
             state.allNews[action.payload].share += 1
         },
         addNewNews: (state, action) => {
-             state.allNews.unshift(action.payload) 
+            state.allNews.unshift(action.payload)
+        },
+        setBoole: (state, action) => {
+            state.boole = action.payload
+        },
+        setSelectedCategory: (state, action) => {
+            state.selectedCategory = action.payload
         }
 
     },
 })
 
-export const { setNews, setLike, setComment, setShare, addNewNews } = newsSlice.actions
+export const { setNews, setLike, setComment, setShare, addNewNews, setBoole, setCategories, setSelectedCategory } = newsSlice.actions
 
 export default newsSlice.reducer

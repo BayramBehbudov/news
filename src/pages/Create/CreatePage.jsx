@@ -12,24 +12,41 @@ const CreatePage = () => {
   const titleRef = useRef();
   const imgRef = useRef();
   const descRef = useRef();
+  const authorRef = useRef();
+  const categoryRef = useRef();
 
   function addNews() {
     const title = titleRef.current.value;
     const img = imgRef.current.value;
     const description = descRef.current.value;
-    if (title.trim() != "" && img.trim() != "" && description.trim() != "") {
+    const author = authorRef.current.value;
+    const category = authorRef.current.value;
+
+    if (
+      title.trim() != "" &&
+      author.trim() != "" &&
+      category.trim() != "" &&
+      img.trim() != "" &&
+      description.trim() != ""
+    ) {
       const newNews = {
-        title,
         img,
+        title,
         description,
+        publishedAt: dateToMilliseconds(new Date()),
+
+        author,
+        category,
+
         like: 0,
         comment: 0,
         share: 0,
-        date: dateToMilliseconds(),
       };
       dispatch(addNewNews(newNews));
     }
     titleRef.current.value = "";
+    authorRef.current.value = "";
+    categoryRef.current.value = "";
     imgRef.current.value = "";
     descRef.current.value = "";
   }
@@ -50,6 +67,18 @@ const CreatePage = () => {
               type="text"
               ref={imgRef}
               placeholder="Image Url"
+              className={style.input}
+            />
+            <input
+              type="text"
+              ref={authorRef}
+              placeholder="Author"
+              className={style.input}
+            />
+            <input
+              type="text"
+              ref={categoryRef}
+              placeholder="Category"
               className={style.input}
             />
           </div>

@@ -1,6 +1,6 @@
 const useDateUtils = () => {
-    const dateToMilliseconds = () => {
-        const date = new Date();
+    const dateToMilliseconds = (dateString) => {
+        const date = new Date(dateString);
         return date.getTime();
     };
 
