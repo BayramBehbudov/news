@@ -1,7 +1,7 @@
 import React from "react";
 import style from "../news.module.css";
 import ActionBtn from "./ActionBtn";
-import timer from "../../../../hook/timer";
+import timer from "../../../../helper/timer";
 const NewsItem = ({ news, index }) => {
   const { timeDifference } = timer();
 

@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import Layout from "../Layout/Layout";
 import style from "./create.module.css";
-import timer from "../../../hook/timer";
+import timer from "../../../helper/timer";
 import { addNewNews } from "../../../store/newsSlice";
 import { useDispatch } from "react-redux";
 

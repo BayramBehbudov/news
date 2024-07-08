@@ -4,7 +4,7 @@ import style from "./news.module.css";
 import NewsItem from "./components/NewsItem";
 import { useDispatch, useSelector } from "react-redux";
 import { setNews, setBoole } from "../../../store/newsSlice";
-import formattedNews from "../../../hook/formatNews";
+import formattedNews from "../../../helper/formatNews";
 import axios from "axios";
 import Categories from "../../Components/categories/Categories";
 
